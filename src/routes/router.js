@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
-const leadmodel = require("../schema/models")
 const dashboard = require("./AdminRoutes/dashboard")
+const registrationmodel = require("../schema/models")
 
 
 router.get('', (req, res) => {
@@ -9,7 +9,21 @@ router.get('', (req, res) => {
 })
 
 router.post("", async (req, res) => {
-    console.log(req.body)  
+    const { studentName, fatherName, schoolclass , contact, email} = req.body 
+
+
+    const data = new registrationmodel({
+        studentName, fatherName, schoolclass , contact, email
+    })
+
+    try {
+        const result = await data.save()
+        console.log(result)
+        
+    } catch (error) {
+        console.log(error)
+    }
+
 })
 
 

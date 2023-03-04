@@ -3,7 +3,7 @@ const app = express()
 const router = require("./routes/router")
 const cors = require("cors")
 const cookieParser = require("cookie-parser")
-// require("./database/db")
+require("./database/db")
 
 
 //udpate

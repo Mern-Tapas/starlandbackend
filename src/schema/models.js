@@ -1,15 +1,13 @@
 const mongoose = require("mongoose");
 
-const leadschema = new mongoose.Schema({
-    service: String,
-    loantype: String,
-    vehical: String,
-    year: String,
-    currentbank: String,
-    name: String,
-    contact: Number
+const registration = new mongoose.Schema({
+    studentName: String,
+    fatherName: String,
+    schoolclass: String,
+    contact: String,
+    email: String
 })
 
-const leadmodel =  mongoose.model("leades",leadschema)
+const registrationmodel = mongoose.model("registrationmodel", registration)
 
-module.exports = leadmodel
+module.exports = registrationmodel
