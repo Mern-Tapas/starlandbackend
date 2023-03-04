@@ -8,6 +8,8 @@ const registration = new mongoose.Schema({
     email: String
 })
 
+//only comment
+
 const registrationmodel = mongoose.model("registrationmodel", registration)
 
 module.exports = registrationmodel
