@@ -7,7 +7,7 @@ const registrationmodel = require("../schema/models")
 router.get('', (req, res) => {
     res.send("home")
 })
-router.get('test', (req, res) => {
+router.get('/test', (req, res) => {
     res.send("test")
 })
 
